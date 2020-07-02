@@ -7,11 +7,12 @@ repay = 30000
 # 返済期間（月ごと）
 month = 0
 
-while debt > repay:
-    debt = debt * interest - repay
-    month += 1
-    print(month,"ヶ月目:返済額=",repay,"円,","残り",debt)
-else:
+while debt > 0:
     debt = debt * interest
     month += 1
-    print(month,"ヶ月目:返済額=",debt,"円,","返済完了")
+    if debt > repay:
+        debt -= repay
+        print(month,"ヶ月目:返済額=",repay,"円,","残り",debt)
+    else:
+        print(month,"ヶ月目:返済額=",debt,"円,","返済完了")
+        break
