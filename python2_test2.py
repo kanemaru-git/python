@@ -23,3 +23,5 @@ if isleap(now.year + 1):
     print("来年は閏年です。")
 else:
     print("来年は閏年ではないです。")
+
+# commitコメントにrefsつけ忘れたので再度pushしました。
